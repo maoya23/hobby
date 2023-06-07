@@ -34,7 +34,7 @@ class MyCardReader(object):
 
         return True
     
-    # 京都大学学生証 学籍番号と名前（半角カナ）を返す
+
     def read_kucard(self, tag):
         servc = 0x1A8B
         service_code = [nfc.tag.tt3.ServiceCode(servc >> 6, servc & 0x3F)]
@@ -64,7 +64,7 @@ class MyCardReader(object):
         
  
 if __name__ == '__main__':
-    #path=/braindevreg/record
+    
     #if os.path.exists(path)==False:
         #os.mkdir(path)
     
@@ -73,7 +73,7 @@ if __name__ == '__main__':
     while True:
         #最初に表示
         print(datetime.datetime.now())
-        print("ようこそ、SilverGym今吉ジム店へ\n")
+        print("ようこそ、SilverGymへ\n")
 
         #タッチ待ち
         try:
@@ -152,7 +152,7 @@ if __name__ == '__main__':
             requests.post(url,data=data)
         except:
             print()
-            print("slackに通知できませんでした。問題ありませんが、何回か続くようでしたら担当者（松尾、鈴木、立木）に連絡ください。")
+            print("slackに通知できませんでした。問題ありませんが、何回か続くようでしたら担当者に連絡ください。")
             print()
             
         
